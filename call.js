@@ -1,11 +1,21 @@
-function name(first_name,last_name){
-           console.log(`my nmae is ${this.first_name} and last name is ${this.last_name}`)
+// Call
+
+const myobj ={
+    firstName:"diljan",
+    age:23,
+    about: function(){
+        console.log(`my name is ${this.firstName} and age is ${this.age}`)
+    }
+};
+
+// console.log(myobj.about.call(myobj));
+myobj.about();
+
+let myobj2 ={
+    firstName:"malik ali",
+    age:25
 }
 
-let fnmae = {
-    first_name : "diljan",
-    last_name : "ali"
-}
-
-let fun= name.bind(fnmae)
-fun()
+myobj.about.call(myobj2);
+//  myobj.call(myobj2)
+// console.log(name)
